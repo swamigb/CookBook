@@ -1,0 +1,11 @@
+.form-group.required .control-label:after {
+    content:"*";
+    color:red;
+  }
+  input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched {
+      border:1px solid red;
+    /* outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px red; */
+  }

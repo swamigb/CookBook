@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    
+    <form (ngSubmit)="onSubmit(authForm)"  #authForm="ngForm">
+       <div class="form-group">
+        <label for="email"><span class="glyphicon glyphicon-user"></span>User Id</label>
+        <input type="text" class="form-control" name="email" id="email" ngModel email required/>
+      </div>
+      <div class="form-group">
+        <label for="passwd"><span class="glyphicon glyphicon-eye-close"></span>Password</label>
+        <input type="password" class="form-control" name="passwd" id="passwd" ngModel password required minlength="6"/>
+      </div>
+      <div>
+         <!-- <div class="alert alert-danger" role="alert" *ngIf="errorMsg">
+          <p> {{ errorMsg }}</p>
+        </div> -->
+        <app-alert [message]="errorMsg" *ngIf="errorMsg" (alertDismissed)="onClose()"></app-alert>
+        <!-- <ng-template appPlaceholder></ng-template> -->
+        <button class="btn btn-success" type="submit" [disabled]="!authForm.valid"><span class="glyphicon" 
+          [ngClass]="{'glyphicon-refresh spinning': isLoading, 'glyphicon-lock':!isLoading}">
+                </span> {{ isLoginMode? 'Login' : 'Sign Up'}}
+         </button> |
+        <button class="btn btn-default" type="button" (click)="onSwitchMode()" >Switch to {{ isLoginMode? 'Sign Up' : 'Login'}}</button>
+                       
+      </div>
+      
+     
+
+    </form>
+  </div>
+</div>

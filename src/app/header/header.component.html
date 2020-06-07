@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+                <span class="icon-bar" *ngFor="let iconBar of [1,1,1]"></span>
+            </button>
+            <a routerLink="/" class="navbar-brand "><span class="glyphicon glyphicon-book"></span> <span>Recipe Book</span></a>
+        </div>
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+            <ul class="nav navbar-nav">
+                <!-- <li><a href="#" (click)="onSelectMenu('recipe')">Recipes</a></li>
+                <li><a href="#" (click)="onSelectMenu('shopping-list')">Shopping List</a></li>  -->
+                <li routerLinkActive="active" *ngIf="!isAuthenticated"><a [routerLink]="['/login']" >Login</a></li>
+                <li routerLinkActive="active" *ngIf="isAuthenticated"><a [routerLink]="['/recipes']">Recipes</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['/shopping-list']" >Shopping List</a></li>
+            </ul>
+            <div class="pull-right">
+            <ul class="nav navbar-nav navrbar-right">
+                <li  *ngIf="isAuthenticated"> <a>{{userEmail}}<span class="glyphicon glyphicon-user"></span></a> </li>
+                   <li class="dropdown" appDropdown *ngIf="isAuthenticated"> 
+                    
+                    <a style="cursor: pointer;" class="dropdown-toggle" role="button" >Manage<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a style="cursor: pointer;" (click)="onSaveData()"><span class="glyphicon glyphicon-save"></span>Save Data</a></li>
+                        <li><a style="cursor: pointer;" (click)="onFetchData()"><span class="glyphicon glyphicon-import"></span> Fetch Data</a></li>
+                    </ul>
+                </li>
+                <li><a style="cursor: pointer;" *ngIf="isAuthenticated" (click)="onLogout()"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
