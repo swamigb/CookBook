@@ -1,6 +1,15 @@
 # RecipeBook
+This is my first angular app, outcome of my training on Udemy.
+This app uses ngrx for state management anf firebase as backend.
+For styling, I've used bootstratp v3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+
+## Backend
+Create a project on firebase and update API key in enviroments folder to yours to play with this project
+
+## Docker
+This projects includes a ready to use docker to build and run the app in docker container
 
 ## Development server
 
