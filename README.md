@@ -1,23 +1,15 @@
 # RecipeBook
 This is my first angular app, outcome of my training on Udemy.
 This app uses ngrx for state management anf firebase as backend.
-<<<<<<< HEAD
 This app is offline enabled using angular pwa
 For styling, I've used bootstratp v3
-
-=======
-For styling, I've used bootstratp v3
->>>>>>> 93e0f73a6279bbd01d6a76a82b43ed81390f0c71
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Backend
-<<<<<<< HEAD
+
 Create a project on firebase and update API key in enviroments folder to yours to play with this project.
 Replace project name with your firebase project name in ".firebaserc" file
-=======
-Create a project on firebase and update API key in enviroments folder to yours to play with this project
->>>>>>> 93e0f73a6279bbd01d6a76a82b43ed81390f0c71
 
 ## Docker
 This projects includes a ready to use docker file to build and run the app in docker container
