@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Create a project on firebase and update API key in enviroments folder to yours to play with this project
 
 ## Docker
-This projects includes a ready to use docker to build and run the app in docker container
+This projects includes a ready to use docker file to build and run the app in docker container
 
 ## Development server
 
